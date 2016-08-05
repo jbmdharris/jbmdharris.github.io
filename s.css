@@ -30,6 +30,7 @@ a:hover {
   align-items: center;
   padding: .5rem 2rem;
   margin: 0;
+  border-bottom: 1px solid #fff; /* for high contrast accessibility */
 }
 .banner h1 {
   margin: 0 .7rem;
