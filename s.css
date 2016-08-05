@@ -63,6 +63,7 @@ a:hover {
 /* banner icons */
 .banner svg {
   fill: #fff;
+  fill: currentColor; /* better for accessibility when supported */
 }
 
 .logo {
@@ -72,23 +73,20 @@ a:hover {
 
 .logo .c {
   stroke: #fff;
+  stroke: currentColor; /* better for accessibility when supported */
   fill: none;
 }
 
-.inlogo {
+.in svg {
   width: 1.5rem;
   height: 1.5rem;
-}
-
-.inlogo .i, .inlogo .n {
-  fill: #006699;
 }
 
 .in {
   font-size: 0; /* icon link accessibility */
 }
 
-.in:hover .b {
+.in:hover {
   fill: #c0e6ff;
 }
 
