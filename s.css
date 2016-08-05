@@ -24,6 +24,7 @@ a:hover {
 .banner {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   background: #006699;
   color: #fff;
   align-items: center;
@@ -44,8 +45,19 @@ a:hover {
   padding: 0.2rem; /* for keyboard focus */
 }
 
+.banner a.r {
+  margin: 0;
+}
+
 .banner a:focus {
   outline: solid 1px #fff;
+}
+
+.links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.3rem 0;
 }
 
 /* banner icons */
@@ -83,4 +95,11 @@ a:hover {
 /* ===== main content ===== */
 .main {
   padding: 2rem;
+}
+
+/* ===== responsive ===== */
+@media only screen and (max-width: 30rem) {
+  .banner {
+    flex-direction: column;
+  }
 }
