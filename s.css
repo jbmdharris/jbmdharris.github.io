@@ -7,63 +7,79 @@ body {
   padding: 0;
 }
 
-.logo {
-  fill:#fff;
-  width:2.5rem;
-  height:2.5rem;
+abbr {
+  text-decoration: none;
 }
 
-.logo .c {
-  stroke:#fff;
-  fill:none;
-}
-.linkedin {
-  fill: #fff;
-  width: 1.5rem;
-  height: 1.5rem;
+a {
+  text-decoration: none;
+  color: #4178be;
 }
 
-.linkedin .i, .linkedin .n {
-  fill: #006699;
+a:hover {
+  text-decoration: underline;
 }
 
+/* ===== banner ===== */
 .banner {
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  display:flex;
-  flex-direction:row;
+  display: flex;
+  flex-direction: row;
   background: #006699;
+  color: #fff;
   align-items: center;
-  padding: .5rem .7rem;
+  padding: .5rem 2rem;
   margin: 0;
 }
 .banner h1 {
   margin: 0 .7rem;
   font-size: 2rem;
-  color: #fff;
   font-weight: normal;
   flex-grow: 1;
 }
 
-.banner nav {
-}
-
 .banner a {
-  text-decoration:none;
   color: #fff;
-  margin: 0 .5rem;
+  margin: 0 0 0 1.2rem;
+  padding: 0.2rem; /* for keyboard focus */
 }
 
+.banner a:focus {
+  outline: solid 1px #fff;
+}
+
+/* banner icons */
+.banner svg {
+  fill: #fff;
+}
+
+.logo {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.logo .c {
+  stroke: #fff;
+  fill: none;
+}
+
+.inlogo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.inlogo .i, .inlogo .n {
+  fill: #006699;
+}
+
+.in {
+  font-size: 0; /* icon link accessibility */
+}
+
+.in:hover .b {
+  fill: #c0e6ff;
+}
+
+/* ===== main content ===== */
 .main {
   padding: 2rem;
-}
-.container {
-  width:100%;
-  height:100%;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
 }
