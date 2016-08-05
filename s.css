@@ -96,6 +96,12 @@ a:hover {
   padding: 2rem;
 }
 
+footer {
+  color: #777;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
 /* ===== responsive ===== */
 @media only screen and (max-width: 30rem) {
   .banner {
