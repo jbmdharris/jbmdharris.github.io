@@ -134,4 +134,10 @@ footer {
   .banner {
     flex-direction: column;
   }
+  .pthumb  img{
+    width: 100%;
+  }
+  .epic {
+    width: 100%;
+  }
 }
