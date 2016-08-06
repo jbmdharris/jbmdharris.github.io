@@ -137,6 +137,9 @@ footer {
   .pthumb  img{
     width: 100%;
   }
+  .hgallery img {
+    width: 125px;
+  }
   .epic {
     width: 100%;
   }
