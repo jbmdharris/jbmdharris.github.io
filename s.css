@@ -1,12 +1,33 @@
+/* ----------------------------------------------------------------
+So, you decided to take a look under the hood here and see what kind
+of code I write didn't you? Of course you did! It's what I do when I
+review anyone's resume too. :)
+
+For this site I chose not to use a CSS preprocessor. I'm also not
+using reset styles either. This site is simple... it doesn't need
+much. So, I'm keeping the CSS simple. The only thing from a
+preprocessor that would be helpful here really would be nested
+styles in a few places and maybe some color variables.
+
+There's a lot of comments in here so you know what I'm doing. Of
+course in a real production site this would all be minified. I will
+say now that I put all my declarations on separate lines. It makes
+diffs in source control systems easier to read.
+---------------------------------------------------------------- */
 body {
   color:#222;
   background-color:#fff;
-  font-family: 'EB Garamond', serif;
-  font-size: 120%;
   margin: 0;
   padding: 0;
+  font-family: 'EB Garamond', serif;
+  
+  /* Garamond renders a little thin on some platforms and browsers...
+  so make it bigger to be more readable */
+  font-size: 120%;
 }
 
+/* ok, so here's one a reset stylesheet probably would have taken care of for me.
+Gotta love Firefox being different here. */
 abbr {
   text-decoration: none;
 }
@@ -24,7 +45,20 @@ a:hover {
 header {
   background: #006699;
   color: #fff;
-  border-bottom: 1px solid #fff; /* for high contrast accessibility */
+
+   /* Bottom border to separate banner during high contrast accessibility.
+   Normally, I would do this with an accessibility class like dj_a11y.
+   but I'm not loading a JavaScript framework to detect high contrast.
+   Yeah, this means the banner is 1px taller below the content than above...
+   But really, could your grandmother tell at a glance?
+   And would you have noticed yourself if you hadn't looked here in the CSS? :) */
+  border-bottom: 1px solid #006699;
+  
+  /* stick the banner to the top of the browser window so it's always
+  visible and you see my name and contact links */
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .banner {
@@ -40,17 +74,22 @@ header {
   margin: 0 .7rem;
   font-size: 2rem;
   font-weight: normal;
-  flex-grow: 1;
   white-space: nowrap;
+  
+  /* This makes the action icons float to the right...
+  Gosh I love flexbox! So much easier than in the old days! */  
+  flex-grow: 1;
 }
 
 .banner a {
   color: #fff;
   margin: 0 0 0 1.2rem;
-  padding: 0.2rem; /* for keyboard focus */
+  padding: 0.2rem; /* for keyboard focus to look better around each icon */
 }
 
-.banner a.e {
+/* yeah, if we didn't do this, when the action icons wrapped,
+they wouldn't be centered now would they? */
+.banner a:first-child {
   margin: 0;
 }
 
@@ -67,8 +106,11 @@ header {
 
 /* banner icons */
 .banner svg {
+  /* most browsers support currentColor... but if they don't, we
+  want to have a valid value. Using currentColor makes it so the
+  icon color matches the text color in high contrast accessibility mode. */
   fill: #fff;
-  fill: currentColor; /* better for accessibility when supported */
+  fill: currentColor;
 }
 
 .logo {
@@ -77,27 +119,32 @@ header {
 }
 
 .logo .c {
+  /* most browsers support currentColor... but if they don't, we
+  want to have a valid value. Using currentColor makes it so the
+  icon color matches the text color in high contrast accessibility mode. */
   stroke: #fff;
-  stroke: currentColor; /* better for accessibility when supported */
+  stroke: currentColor;
   fill: none;
 }
 
-.in svg {
+ /* my icon links have text in them for the screen readers...
+ but we don't want that text to show to the sighted user. */
+.links {
+  font-size: 0;
+}
+
+.links svg {
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.in {
-  font-size: 0; /* icon link accessibility */
-}
-
-.in:hover {
+.links a:hover svg {
   fill: #c0e6ff;
 }
 
 /* ===== main content ===== */
 .main {
-  padding: 0 2rem 0 2rem;
+  padding: 5rem 2rem 0 2rem;
   max-width: 960px;
   margin: 0 auto;
 }
@@ -113,7 +160,6 @@ header {
 }
 
 .pthumb  img{
-  /* border-radius: 25%; */
   border: 1px solid #eee;
 }
 
@@ -124,22 +170,44 @@ header {
 }
 
 footer {
-  color: #777;
+  color: #707070; /* lightest we can make it and still have it pass Section 508 AA color contrast rules */
   text-align: center;
   font-size: 0.9rem;
 }
 
-/* ===== responsive ===== */
+/* ===== Responsive Design ===== */
 @media only screen and (max-width: 33rem) {
+  /* stack the banner vertically */
   .banner {
     flex-direction: column;
   }
+
+  /* hide the logo because it takes too much space on a phone */
+  .logo  {
+    display: none;
+  }
+
+  /* When the banner stacks, we need to push the content lower on the
+     page so the content doesn't get chopped off under the banner.
+     We could get into some trouble if the banner wrapped to three lines,
+     but I don't see that happening since the banner height is based on
+     the height of the h1 and icons which are all in rem units. */
+  .main {
+    padding-top: 7rem;
+  }
+
+  /* horizontal scrolling on phones is so yucky... so let's shrink the images */
   .pthumb  img{
     width: 100%;
   }
+
+  /* and the historical gallery is better when it's two columns instead of one so,
+  smaller makes that happen on most phones */
   .hgallery img {
     width: 125px;
   }
+
+  /* avoid more horizontal scrolling */
   .epic {
     width: 100%;
   }
