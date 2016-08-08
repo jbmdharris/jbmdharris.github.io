@@ -161,7 +161,17 @@ they wouldn't be centered now would they? */
 }
 
 .pthumb  img{
-  border: 1px solid #eee;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.pthumb:focus {
+  outline: none;
+}
+
+.pthumb:hover img, .pthumb:focus img {
+  box-shadow: 0 0 15px 0;
 }
 
 footer {
