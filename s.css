@@ -1,7 +1,8 @@
 /* ----------------------------------------------------------------
 So, you decided to take a look under the hood here and see what kind
 of code I write didn't you? Of course you did! It's what I do when I
-review anyone's resume too. :)
+review anyone's resume too. :) Don't forget to check out the comments
+in the HTML file as well.
 
 For this site I chose not to use a CSS preprocessor. I'm also not
 using reset styles either. This site is simple... it doesn't need
@@ -11,8 +12,8 @@ styles in a few places and maybe some color variables.
 
 There's a lot of comments in here so you know what I'm doing. Of
 course in a real production site this would all be minified. I will
-say now that I put all my declarations on separate lines. It makes
-diffs in source control systems easier to read.
+go ahead and say now that I put all my CSS declarations on separate
+lines because it makes diffs in source control systems easier to read.
 ---------------------------------------------------------------- */
 body {
   color:#222;
@@ -161,12 +162,6 @@ they wouldn't be centered now would they? */
 
 .pthumb  img{
   border: 1px solid #eee;
-}
-
-.hgallery img {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  margin: 2px;
 }
 
 footer {
