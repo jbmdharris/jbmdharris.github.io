@@ -60,6 +60,8 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
+  
+  z-index: 10;
 }
 
 .banner {
@@ -160,18 +162,49 @@ they wouldn't be centered now would they? */
   box-shadow: 0 0 15px 0;
 }
 
-.pthumb  img{
+.pthumb {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px;
+  display: inline-block;
+  position: relative; /* for the generated content on focus */
 }
 
+.pthumb  img{
+  display: block;
+}
+
+/* disable the ugly chrome focus box on links */
 .pthumb:focus {
   outline: none;
 }
 
-.pthumb:hover img, .pthumb:focus img {
+/* gotta use a border so the focus shows up in high contrast mode */
+.pthumb:focus::after {
+    content: ' ';
+    border: 1px dotted #ccc;
+    border-radius: 5px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+}
+
+/* my visual treatment for hover/focus */
+.pthumb:hover, .pthumb:focus {
+  outline-color: #000;
   box-shadow: 0 0 15px 0;
+}
+
+/* horizontal scrolling on phones is so yucky... so let's shrink the images */
+.pthumb  img{
+  max-width: 100%;
+}
+
+/* avoid horizontal scrolling */
+.rpic {
+  max-width: 100%;
 }
 
 footer {
@@ -201,19 +234,10 @@ footer {
     padding-top: 7rem;
   }
 
-  /* horizontal scrolling on phones is so yucky... so let's shrink the images */
-  .pthumb  img{
-    width: 100%;
-  }
-
   /* and the historical gallery is better when it's two columns instead of one so,
   smaller makes that happen on most phones */
   .hgallery img {
     width: 125px;
   }
 
-  /* avoid more horizontal scrolling */
-  .epic {
-    width: 100%;
-  }
 }
