@@ -181,6 +181,7 @@ they wouldn't be centered now would they? */
 
 /* gotta use a border so the focus shows up in high contrast mode */
 .pthumb:focus::after {
+  /*
     content: ' ';
     border: 1px dotted #ccc;
     border-radius: 5px;
@@ -189,6 +190,7 @@ they wouldn't be centered now would they? */
     left: 5px;
     right: 5px;
     bottom: 5px;
+  */
 }
 
 /* my visual treatment for hover/focus */
