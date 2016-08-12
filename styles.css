@@ -192,7 +192,12 @@ they wouldn't be centered now would they? */
 }
 
 /* horizontal scrolling on phones is so yucky... so let's shrink the images if they are too big to fit */
-.pthumb, .pthumb  img, .rpic {
+.pthumb, .pthumb  img {
+  max-width: 98%; /* just in case the calc is not supported */
+  max-width: calc(100% - 10px);
+}
+
+.rpic {
   max-width: 100%;
 }
 
