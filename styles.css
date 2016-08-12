@@ -163,7 +163,7 @@ they wouldn't be centered now would they? */
 }
 
 .pthumb {
-  border: 1px solid #ccc;
+  border: 1px solid #e0e0e0;
   border-radius: 10px;
   padding: 8px;
   display: inline-block;
@@ -188,7 +188,7 @@ they wouldn't be centered now would they? */
 
 /* this is to display focus in high contrast mode */
 .pthumb:focus img {
-  outline: 1px dotted #ccc;
+  outline: 1px dotted #e0e0e0;
 }
 
 /* horizontal scrolling on phones is so yucky... so let's shrink the images if they are too big to fit */
