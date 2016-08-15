@@ -34,9 +34,9 @@ because I can learn anything if I don't know it already.
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="robots" content="index,follow">
-	<meta name="description" content="Front-end web developer with 25+ years successfully creating outstanding content, delivering innovative products, and leading empowered teams.">
-	<meta name="keywords" content="Web Developer, Front-end Developer, Software Developer, Software Engineer">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="Front-end web developer with 25+ years successfully creating outstanding content, delivering innovative products, and leading empowered teams.">
+  <meta name="keywords" content="Web Developer, Front-end Developer, Software Developer, Software Engineer">
   <meta name="author" content="Michael Harris">
   <meta name="dcterms.date" content="2016-07-03"/>
   <meta name="dcterms.rights" content="© Michael Harris 2016"/>
@@ -66,26 +66,30 @@ because I can learn anything if I don't know it already.
         </svg>
         <h1 class="title">Michael Harris</h1>
         <div class="links">
-          <!-- The title attribute is for the mouse user's tooltip. The text in the link is for the screen reader user. It's font size 0 so it doesn't show. -->
+          <!-- The title attribute is for the mouse user's tooltip. The text in the link is for the screen reader user.
+          It's font size 0 so it doesn't show. You'll notice that the text is after the SVG. This is because there is 
+          a rendering bug in Safari in Arabic where the space for the text is still reserved even though the font size
+          is zero. If you put the text before the SVG, then the SVG shifts over. Now, I don't plan on translating this
+          site into Arabic... but I put it in here so I can show you that I know about such things. -->
           <a class="e" href="mailto:jbmdharris@gmail.com" title="Email me">
-            Email me
             <!-- public domain mail icon from http://www.aiga.org/symbol-signs/ crediting your sources is always good for legal issues later -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
               <path d="M39.9 34.9H.2V5.2h39.7v29.7zm-37.7-2h35.7V7.2H2.2v25.7zM20.1 24.9c-1.2 0-2.2-.4-3-1.2L.8 7.2l1.4-1.4 16.3 16.5c.4.4 1 .6 1.6.6.6 0 1.2-.2 1.6-.6L37.9 5.9l1.4 1.4-16.2 16.4c-.8.7-1.9 1.2-3 1.2zM.523 33.2l13.57-13.865 1.43 1.4-13.57 13.863zM24.633 20.743l1.43-1.398 13.565 13.87-1.43 1.4z"/>
             </svg>
+            Email me
           </a>
           <a class="r" href="MichaelHarris-Resume-GitHub1.pdf" title="View my R&eacute;sum&eacute;" target="_blank">
-            View my R&eacute;sum&eacute;
             <!-- As you can see, the SVGs are optimized with SVGO -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
               <path d="M34.3 39.4H5.8V.6h28.5v38.8zm-26.5-2h24.5V2.6H7.8v34.8zM11.9 25.6h16.7v2H11.9zM11.9 30.8h16.7v2H11.9zM11.9 22v-1.5s.1-.9 1.2-1.2c0 0 1.8-.7 3.2-1.3.7-.3.9-.5 1.6-.8 0 0 .1-.4 0-.6h.6s.1.1 0-.8c0 0-.7-.2-.7-1.6 0 0-.5.2-.6-.7 0-.6-.5-1.1.2-1.5l-.3-.9s-.7-3.6 1.2-3c-.8-.9 4.5-1.9 4.8 1.1 0 0 .2 1.6 0 2.7 0 0 .8-.1.3 1.4 0 0-.3 1.1-.7.8 0 0 .1 1.4-.6 1.6v.8l.7.1s-.1.6 0 .7c0 0 .8.5 1.7.8 1.8.5 3.9 1.2 3.9 1.9 0 0 .2.9.2 2H11.9z"/>
             </svg>
+            View my R&eacute;sum&eacute;
           </a>
           <a class="in" target="_blank" title="View my LinkedIn profile" href="https://www.linkedin.com/in/jbmdharris">
-            View my LinkedIn profile
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.8 76.3">
               <path d="M70.2 0H5.6C2.5 0 0 2.4 0 5.5v65.3c0 3.1 2.5 5.5 5.6 5.5h64.6c3.1 0 5.6-2.4 5.6-5.5V5.5c0-3.1-2.5-5.5-5.6-5.5zM23 63.8H11.6V29.4H23v34.4zm-5.7-39.1c-4 0-6.4-2.7-6.4-5.9 0-3.4 2.6-5.9 6.5-5.9 4 0 6.3 2.5 6.4 5.9 0 3.3-2.5 5.9-6.5 5.9zm46.9 39H52.8V45.3c0-4.5-1.6-7.7-5.8-7.7-3.1 0-5.1 2.2-5.9 4.2-.3.8-.4 1.8-.4 2.8v19.3H29.3s.1-31.3.1-34.5h11.4v4.8c1.5-2.3 4.2-5.6 10.3-5.6 7.5 0 13.1 4.9 13.1 15.5v19.6zM40.8 34.4v-.2c0 .1-.1.2 0 .2z"/>
             </svg>
+            View my LinkedIn profile
           </a>
         </div>
       </div>
